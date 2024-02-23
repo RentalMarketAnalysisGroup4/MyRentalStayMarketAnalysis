@@ -53,7 +53,7 @@ jobs:
         working-directory: deploy
         run: |
           terraform apply -auto-approve
-          echo "::set-output name=status::success"
+          echo "::set-output name=status::success" 
 
 
       - name: Wait for 5 seconds
