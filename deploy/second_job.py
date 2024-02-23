@@ -33,7 +33,7 @@ selected_columns = [
 "security_deposit", "guests_included", "extra_people", "availability_30", "availability_60",
 "availability_90", "availability_365", "number_of_reviews", "review_scores_rating",
 "instant_bookable", "month", "minimum_minimum_nights", "maximum_maximum_nights",
-"calculated_host_listings_count", "cancellation_policy"
+"calculated_host_listings_count"
 ]
 
 
@@ -83,8 +83,8 @@ StructField("instant_bookable", StringType()),
 StructField("month", StringType()),
 StructField("minimum_minimum_nights", IntegerType()),
 StructField("maximum_maximum_nights", IntegerType()),
-StructField("calculated_host_listings_count", IntegerType()),
-StructField("cancellation_policy", StringType())
+StructField("calculated_host_listings_count", IntegerType())
+
 ])
 
 
