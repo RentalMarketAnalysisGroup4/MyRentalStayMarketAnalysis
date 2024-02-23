@@ -22,9 +22,9 @@ resource "aws_glue_classifier" "csv_classifier" {
 
 
 resource "aws_glue_crawler" "rental_market_analysis" {
-    name = "rental_market_analysis_crawler"
-    role = "arn:aws:iam::739294697170:role/LabRole"
-    database_name = aws_glue_catalog_database.RentalMarket.name
+    name          = "rental_market_analysis_crawler"
+    role          = "arn:aws:iam::739294697170:role/LabRole"
+    database_name = aws_glue_catalog_database.RentalMarket.name  # Corrected reference
 
     s3_target {
       path = "s3://final-044/umamudkhede/" 
@@ -34,6 +34,7 @@ resource "aws_glue_crawler" "rental_market_analysis" {
     }
     classifiers = [aws_glue_classifier.csv_classifier.name]
 }
+
 
 ####-------------------------------- Athena ------------------------------------------####
 resource "aws_athena_workgroup" "rental_market_analysis_workgroup" {
