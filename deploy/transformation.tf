@@ -18,7 +18,7 @@ resource "aws_glue_job" "ingestion" {
   max_retries = 0 
   name = "Ingestion_job-${random_id.random_id_generator.hex}" 
   description = "Ingesting data from s3" 
-  role_arn = "arn:aws:iam::199657276973:role/LabRole"
+  role_arn = "arn:aws:iam::739294697170:role/LabRole"
   
   number_of_workers = 2 
   worker_type = "G.1X" 
