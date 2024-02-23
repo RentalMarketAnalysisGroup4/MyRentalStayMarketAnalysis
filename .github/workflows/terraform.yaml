@@ -55,6 +55,7 @@ jobs:
           terraform apply -auto-approve
           echo "::set-output name=status::success"
 
+
       - name: Wait for 5 seconds
         if: ${{ always() }}
         run: sleep 5
