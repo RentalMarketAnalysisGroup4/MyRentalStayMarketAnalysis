@@ -27,7 +27,7 @@ resource "aws_glue_crawler" "rental_market_analysis" {
     database_name = aws_glue_catalog_database.RentalMarket.name
 
     s3_target {
-      path = "s3://final-044/umamudkhede/"
+      path = "s3://final-044/umamudkhede/" 
     }
     tags = {
         product_type = "rental_market_analysis"
