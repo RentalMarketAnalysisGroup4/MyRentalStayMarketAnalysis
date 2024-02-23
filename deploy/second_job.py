@@ -21,7 +21,7 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
-df_rds_new = spark.read.parquet('s3://group4-raw-data-zone/job1/')
+df_rds_new = spark.read.parquet('s3://airbnbgroup4/Airbnb/')
 
 df = spark.read.format('csv').options(sep=",", escape='"', mode="PERMISSIVE", header=True, multiLine=True).load('s3://final-044/zip/total_data.csv')
 
@@ -295,7 +295,7 @@ new_df = new_df.withColumn("maximum_maximum_nights", round(col("maximum_maximum_
 
 # to write in s3 bucket cleaned data in parquet format
 
-output_path = "s3://group4-enrich-data-zone/job2/"
+output_path = "s3://final-044/umamudkhede/"
 
 new_df.coalesce(1).write \
 .option("header", "True") \

@@ -23,11 +23,11 @@ resource "aws_glue_classifier" "csv_classifier" {
 
 resource "aws_glue_crawler" "rental_market_analysis" {
     name = "rental_market_analysis_crawler"
-    role = "arn:aws:iam::199657276973:role/LabRole"
+    role = "arn:aws:iam::739294697170:role/LabRole"
     database_name = aws_glue_catalog_database.RentalMarket.name
 
     s3_target {
-      path = "s3://group4-enrich-data-zone/job2/"
+      path = "s3://final-044/umamudkhede/"
     }
     tags = {
         product_type = "rental_market_analysis"
@@ -42,7 +42,7 @@ resource "aws_athena_workgroup" "rental_market_analysis_workgroup" {
 
 configuration {
     result_configuration {
-        output_location = "s3://group4-enrich-data-zone/queryresults"
+        output_location = "s3://final-044/queryResult/"
     }
 
   }
