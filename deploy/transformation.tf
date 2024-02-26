@@ -32,7 +32,7 @@ resource "aws_glue_job" "ingestion" {
 
 }
 
-resource "aws_glue_job" "cleaning" {  
+resource "aws_glue_job" "cleaning" {    
   glue_version = "4.0"
   max_retries = 0 
   name = "Cleaning_job-${random_id.random_id_generator.hex}" 
