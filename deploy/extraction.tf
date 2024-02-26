@@ -57,7 +57,7 @@ resource "aws_s3_bucket_acl" "scripts" {
   ]
 
   bucket = aws_s3_bucket.scripts.id
-  acl    = "public-read"   
+  acl    = "public-read"    
 }
 
 ####--------------------------------------- EC2 Instance --------------------------------------------####
