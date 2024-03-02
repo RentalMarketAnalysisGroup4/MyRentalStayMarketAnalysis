@@ -29,18 +29,18 @@ resource "aws_glue_job" "ingestion" {
     script_location = "s3://${aws_s3_bucket.scripts.id}/first_job.py" 
     python_version = "3"
   }
-
+  
 }
 
 resource "aws_glue_job" "cleaning" {     
-  glue_version = "4.0"
+  glue_version = "4.0"  
   max_retries = 0 
   name = "Cleaning_job-${random_id.random_id_generator.hex}" 
   description = "Cleaning and preprocessing" 
   role_arn = "arn:aws:iam::739294697170:role/LabRole"
   
   number_of_workers = 2 
-  worker_type = "G.1X" 
+  worker_type = "G.1X"     
   timeout = "60" 
  
   command {
